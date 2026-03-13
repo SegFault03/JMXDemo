@@ -6,6 +6,12 @@
 *.war
 *.ear
 
+# Maven
+target/
+.mvn/
+!**/src/main/**
+!**/src/test/**
+
 # Log files
 *.log
 
