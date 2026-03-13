@@ -9,6 +9,7 @@ public class ProxyMetrics implements ProxyMetricsMBean {
     private boolean flagState;
     private String propertyName;
     private List<String> arrayOfStrings;
+    private NestedBean nestedBean;
 
     public ProxyMetrics() {
         counter1 = 0;
@@ -18,6 +19,7 @@ public class ProxyMetrics implements ProxyMetricsMBean {
         arrayOfStrings = new ArrayList<>();
         arrayOfStrings.add("Hello");
         arrayOfStrings.add("World");
+        nestedBean = new NestedBean();
     }
 
     @Override
@@ -78,6 +80,15 @@ public class ProxyMetrics implements ProxyMetricsMBean {
     @Override
     public void setPropertyName(String value) {
 
+    }
+
+    @Override
+    public NestedBean getNestedBean() {
+        return nestedBean;
+    }
+
+    public void printBean(){
+        System.out.println(nestedBean);
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.niladri;
 
+import com.niladri.beans.NestedBean;
 import com.niladri.beans.ProxyMetricsMBean;
 
 import javax.management.*;
@@ -226,6 +227,7 @@ public class Client {
         boolean flagState = mbeanProxy.getFlagState();
         String propertyName = mbeanProxy.getPropertyName();
         List<String> arrayOfStrings = mbeanProxy.getArrayOfStrings();
+        NestedBean nestedBean = mbeanProxy.getNestedBean();
 
         System.out.println("Printing attributes using proxy:");
         System.out.println("Counter1: " + counter1);
@@ -233,6 +235,8 @@ public class Client {
         System.out.println("PropertyName: " + propertyName);
         System.out.println("FlagState: " + flagState);
         System.out.println("ArrayOfStrings: " + arrayOfStrings);
+        System.out.println("NestedBean's field: i = " + nestedBean.getI());
+        System.out.println("NestedBean's field: list = " + nestedBean.getList());
     }
 
     /**

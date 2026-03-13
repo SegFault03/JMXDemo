@@ -140,6 +140,7 @@ public class Server {
                     } else {
                         proxyMetrics.incrementCounter2();
                     }
+                    proxyMetrics.printBean();
                     try {
                         Thread.sleep(2000);
                     } catch (InterruptedException e) {

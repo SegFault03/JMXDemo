@@ -20,5 +20,7 @@ public interface ProxyMetricsMBean {
     String getPropertyName();
     void setPropertyName(String value);
 
+    NestedBean getNestedBean();
+
     void printCounters();
 }
